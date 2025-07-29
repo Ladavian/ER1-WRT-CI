@@ -20,7 +20,19 @@ sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 #临时修复luci无法保存的问题
 sed -i "s/\[sid\]\.hasOwnProperty/\[sid\]\?\.hasOwnProperty/g" $(find ./feeds/luci/modules/luci-base/ -type f -name "uci.js")
 
+# 移除 uhttpd 依赖
+# 当启用luci-app-quickfile插件时，表示启动nginx，所以移除luci对uhttp(luci-light)的依赖
+remove_uhttpd_dependency() {
+    local config_path="$BASE_PATH/$BUILD_DIR/.config"
+    local luci_makefile_path="$BASE_PATH/$BUILD_DIR/feeds/luci/collections/luci/Makefile"
 
+    if grep -q "CONFIG_PACKAGE_luci-app-quickfile=y" "$config_path"; then
+        if [ -f "$luci_makefile_path" ]; then
+            sed -i '/luci-light/d' "$luci_makefile_path"
+            echo "Removed uhttpd (luci-light) dependency as luci-app-quickfile (nginx) is enabled."
+        fi
+    fi
+}
 
 #调整位置
 # sed -i 's/services/system/g' $(find ./ -type f -path "*/luci-app-ttyd/root/usr/share/luci/menu.d/*" -name "luci-app-ttyd.json")
