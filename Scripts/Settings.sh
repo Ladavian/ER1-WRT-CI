@@ -33,33 +33,7 @@ remove_uhttpd_dependency() {
         fi
     fi
 }
-add_quickfile() {
-    local repo_url="https://github.com/sbwml/luci-app-quickfile.git"
-    local target_dir="$BUILD_DIR/package/emortal/quickfile"
-    if [ -d "$target_dir" ]; then
-        rm -rf "$target_dir"
-    fi
-    git clone --depth 1 "$repo_url" "$target_dir"
 
-    local makefile_path="$target_dir/quickfile/Makefile"
-    if [ -f "$makefile_path" ]; then
-        sed -i '/\t\$(INSTALL_BIN) \$(PKG_BUILD_DIR)\/quickfile-\$(ARCH_PACKAGES)/c\
-\tif [ "\$(ARCH_PACKAGES)" = "x86_64" ]; then \\\
-\t\t\$(INSTALL_BIN) \$(PKG_BUILD_DIR)\/quickfile-x86_64 \$(1)\/usr\/bin\/quickfile; \\\
-\telse \\\
-\t\t\$(INSTALL_BIN) \$(PKG_BUILD_DIR)\/quickfile-aarch64_generic \$(1)\/usr\/bin\/quickfile; \\\
-\tfi' "$makefile_path"
-    fi
-}
-
-# 设置 Nginx 默认配置
-set_nginx_default_config() {
-    local nginx_config_path="$BUILD_DIR/feeds/packages/net/nginx-util/files/nginx.config"
-    if [ -f "$nginx_config_path" ]; then
-        # 使用 cat 和 heredoc 覆盖写入 nginx.config 文件
-        cat > "$nginx_config_path" <<EOF
-config main 'global'
-        option uci_enable 'true'
 #调整位置
 # sed -i 's/services/system/g' $(find ./ -type f -path "*/luci-app-ttyd/root/usr/share/luci/menu.d/*" -name "luci-app-ttyd.json")
 # sed -i '3 a\\t\t"order": 10,' $(find ./ -type f -path "*/luci-app-ttyd/root/usr/share/luci/menu.d/*" -name "luci-app-ttyd.json")
