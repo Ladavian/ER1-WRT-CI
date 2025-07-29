@@ -45,6 +45,7 @@ UPDATE_PACKAGE "openlist2" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main" "pkg"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "master" "pkg"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
+UPDATE_PACKAGE "taskplan" "sirpdboy/luci-app-taskplan" "master"
 
 
 
