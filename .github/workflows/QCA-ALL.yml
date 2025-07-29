@@ -42,8 +42,8 @@ jobs:
       matrix:
         TARGET: [IPQ60XX-WIFI-NO]
         REPO_INFO:
-          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: OWRT, SUFFIX: IMM, USEAPK: 'true'}
-          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: OWRT, SUFFIX: IMM, USEAPK: 'false'}
+          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: ImmortalWrt, SUFFIX: IMM, USEAPK: 'true'}
+          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: ImmortalWrt, SUFFIX: IMM, USEAPK: 'false'}
           - {SOURCE: LiBwrt/openwrt-6.x, BRANCH: k6.12-nss, NAME: OpenWrt, SUFFIX: IMM, USEAPK: 'false'}
 
     #调用公用编译核心WRT-CORE.yml
