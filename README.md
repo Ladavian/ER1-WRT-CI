@@ -28,13 +28,6 @@
 固件自动每天早上5点自动编译
 
 
-## 固件下载
-### OWRT 6.6.x: 
-<https://github.com/ftkey/ER1-WRT-CI/releases>
-### LiBwrt 6.12.x: 
-<https://github.com/ftkey/ER1-WRT-CI/releases>
-
-    
 ### 固件源码(带NSS) 
 #### OWRT
 <https://github.com/VIKINGYFY/immortalwrt.git>
@@ -52,40 +45,6 @@
 ## 刷UBoot方法:
 ### 9008 & TTL下:
 <https://huawei.aito.eu.org/318.html>
-
-### SSH下:
-<https://github.com/ftkey/OpenWRT-CI/tree/uboot>
-
-
-## 软件包
-<details><summary>CONFIG_PACKAGE_luci-app-xxx=y</summary>
-    
-    ```
-    CONFIG_PACKAGE_luci-app-homeproxy=y // OWRT
-    CONFIG_PACKAGE_luci-app-advancedplus=y  # 高级设置
-    CONFIG_PACKAGE_luci-app-alist=y  # Alist网络服务
-    CONFIG_PACKAGE_luci-app-cpufreq=y  # CPU频率策略控制
-    CONFIG_PACKAGE_luci-app-ddns=y  # 动态DNS客户端
-    CONFIG_PACKAGE_luci-app-openvpn-server=y  # OpenVPN服务器
-    CONFIG_PACKAGE_luci-app-samba4=y  # Samba文件共享
-    CONFIG_PACKAGE_luci-app-socat=y  # Socat端口转发工具
-    CONFIG_PACKAGE_luci-app-ttyd=y  # Web终端
-    CONFIG_PACKAGE_luci-app-wolplus=y  # 网络唤醒
-    CONFIG_PACKAGE_luci-app-zerotier=y  # ZeroTier虚拟网络
-    CONFIG_PACKAGE_luci-theme-argon=y  # Argon主题
-    ```
-
-</details>
-<details><summary>CONFIG_PACKAGE_luci-app-xxx=n</summary>
-    
-    ```
-    
-    ```
-
-</details>
-
-
-
 
 ## THKS
 特别感谢QQ群:560094821
