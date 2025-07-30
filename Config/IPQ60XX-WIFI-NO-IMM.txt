@@ -30,5 +30,5 @@ CONFIG_PACKAGE_wpad-openssl=n
 CONFIG_PACKAGE_hostapd-common=n
 CONFIG_PACKAGE_wifi-scripts=n
 #插件调整
-CONFIG_PACKAGE_luci-app-homeproxy=y
+#CONFIG_PACKAGE_luci-app-homeproxy=y
 #CONFIG_PACKAGE_luci-app-nikki=y
