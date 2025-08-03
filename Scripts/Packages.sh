@@ -34,6 +34,8 @@ UPDATE_PACKAGE() {
 UPDATE_PACKAGE "argon" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "homeproxy" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "passwall" "xiaorouji/openwrt-passwall" "main" "pkg"
+UPDATE_PACKAGE "luci-app-smartdns" "pymumu/luci-app-smartdns" "master"
+UPDATE_PACKAGE "smartdns" "pymumu/openwrt-smartdns" "master"
 UPDATE_PACKAGE "nikki" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "passwall" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "vlmcsd" "ftkey/openwrt_pkgs" "main" "pkg"
