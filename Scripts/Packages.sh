@@ -53,6 +53,7 @@ UPDATE_PACKAGE "openlist2" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "master" "pkg"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
 UPDATE_PACKAGE "taskplan" "sirpdboy/luci-app-taskplan" "master"
+UPDATE_PACKAGE "luci-app-adguardhome" "kenzok8/small-package" "main" "pkg"
 
 
 
